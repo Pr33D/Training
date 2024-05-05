@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator v0.5</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="display"><input type="text" name="displayField" id="displayField" value=""></div>
+    <div id="acoris"><button id="ac" onclick="reset()">AC</button><button id="is" onclick="calculate()">=</button></div>
+    <div id="numbers">
+        <button id="sev" onclick="add(7)">7</button><button id="eig" onclick="add(8)">8</button><button id="nin" onclick="add(9)">9</button>
+        <button id="fou" onclick="add(4)">4</button><button id="fiv" onclick="add(5)">5</button><button id="six" onclick="add(6)">6</button>
+        <button id="one" onclick="add(1)">1</button><button id="two" onclick="add(2)">2</button><button id="thr" onclick="add(3)">3</button>
+        <button id="zer" onclick="add(0)">0</button><button id="dot" onclick="add('.')">.</button>
+    </div>
+    <div id="maths">
+        <button id="multi" onclick="add('*')">x</button>
+        <button id="divide" onclick="add('/')">:</button>
+        <button id="minus" onclick="add('-')">-</button>
+        <button id="plus" onclick="add('+')">+</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

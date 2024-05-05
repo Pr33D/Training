@@ -1,0 +1,80 @@
+:root {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background: #001133;
+    grid-template-areas: "display display display display"
+    "acoris acoris acoris acoris"
+    "numbers numbers numbers maths"
+    "numbers numbers numbers maths"
+    "numbers numbers numbers maths"
+    "numbers numbers numbers maths";
+}
+
+button, input {
+    font-size: 6vw;
+    border: 0;
+}
+button {
+    background: #99ddff;
+}
+button:hover {
+    background: #88ccee;
+    color: #003366;
+    transition: 300ms;
+}
+
+#display {
+    grid-area: display;
+    padding: 10px;
+}
+#acoris {
+    grid-area: acoris;
+    padding: 10px;
+}
+#numbers {
+    grid-area: numbers;
+    padding: 10px;
+}
+#maths {
+    grid-area: maths;
+    padding: 10px;
+}
+
+#displayField {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #99ddff;
+    text-align: center;
+    border: 2px solid #99ddff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#ac, #is {
+    box-sizing: border-box;
+    width: 50%;
+    height: 100%;
+}
+
+#multi, #divide, #minus, #plus {
+    box-sizing: border-box;
+    width: 100%;
+    height: 25%;
+}
+#numbers {
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: repeat(4, 1fr);
+}
+#zer {
+    grid-column: 1 / 3;
+}
