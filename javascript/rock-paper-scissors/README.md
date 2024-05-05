@@ -1,3 +1,3 @@
 # Rock, Paper, Scissors
 
-Realized via Javascript
+Realized via javascript
