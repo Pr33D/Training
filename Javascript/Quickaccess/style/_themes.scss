@@ -1,0 +1,92 @@
+& {
+  background: $main-bg;
+}
+
+header,
+footer {
+  background: $hf-bg;
+  color: $txt;
+  a {
+    color: $hf-link;
+    &:hover,
+    &:active {
+      color: $hf-link-hvr;
+    }
+  }
+}
+
+header {
+  nav {
+    button {
+      color: $hf-link;
+      background: $hf-sub-bg;
+      &:hover,
+      &.active {
+        color: $hf-link-hvr;
+        background: $hf-link-hvr-bg;
+      }
+    }
+  }
+}
+
+main {
+  h1 {
+    color: $txt;
+  }
+  .menu {
+    background: $link-bg;
+    color: $link;
+    &:hover,
+    &:active {
+      background: $link-hvr-bg;
+    }
+    a {
+      color: $link;
+      &:hover,
+      &:active {
+        color: $link-hvr;
+      }
+    }
+  }
+  button {
+    background: $sub-bg;
+    color: $txt;
+  }
+}
+
+.addLink {
+  background: $addlink-bg;
+  color: $txt;
+  input {
+    background-color: rgb(230, 230, 230);
+    border-color: rgb(195, 195, 195);
+    color: rgb(9, 30, 66);
+    &:hover{
+      background-color: #fff;
+      border-color: $input-border;
+  }
+  &:focus{
+      background-color: #fff;
+      border-color: $input-border;
+  } 
+}
+  #save {
+    color: #3a4149;
+    background-color: rgb(230, 230, 230);
+    &:hover {
+      background-color: #fff;
+      border-color: $input-border;
+    }
+  }
+}
+
+#toolDataArea {
+  select {
+    background: $sub-bg;
+    color: $txt;
+  }
+}
+#toolTip {
+  background: $sub-bg;
+  color: $link;
+}

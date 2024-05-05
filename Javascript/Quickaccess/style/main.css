@@ -1,0 +1,377 @@
+/* @use "variables" as *; */
+::-webkit-scrollbar {
+  width: 1rem;
+  border-left: 1px solid #333;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html {
+  font-family: "Verdana", Helvetica, sans-serif;
+  font-size: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: default;
+}
+html a {
+  text-decoration: none;
+  cursor: default;
+}
+@media (min-width: 800px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.light-theme {
+  background: #fff;
+}
+.light-theme header,
+.light-theme footer {
+  background: #fff;
+  color: #000;
+}
+.light-theme header a,
+.light-theme footer a {
+  color: #ab377a;
+}
+.light-theme header a:hover, .light-theme header a:active,
+.light-theme footer a:hover,
+.light-theme footer a:active {
+  color: #003b33;
+}
+.light-theme header nav button {
+  color: #ab377a;
+  background: #fff;
+}
+.light-theme header nav button:hover, .light-theme header nav button.active {
+  color: #003b33;
+  background: radial-gradient(closest-side, #bbb, #ddd, #fff);
+}
+.light-theme main h1 {
+  color: #000;
+}
+.light-theme main .menu {
+  background: #3e8979;
+  color: #fff;
+}
+.light-theme main .menu:hover, .light-theme main .menu:active {
+  background: #397b6d;
+}
+.light-theme main .menu a {
+  color: #fff;
+}
+.light-theme main .menu a:hover, .light-theme main .menu a:active {
+  color: #fff;
+}
+.light-theme main button {
+  background: #ccc;
+  color: #000;
+}
+.light-theme .addLink {
+  background: rgba(210, 210, 210, 0.9);
+  color: #000;
+}
+.light-theme .addLink input {
+  background-color: rgb(230, 230, 230);
+  border-color: rgb(195, 195, 195);
+  color: rgb(9, 30, 66);
+}
+.light-theme .addLink input:hover {
+  background-color: #fff;
+  border-color: #ab377a;
+}
+.light-theme .addLink input:focus {
+  background-color: #fff;
+  border-color: #ab377a;
+}
+.light-theme .addLink #save {
+  color: #3a4149;
+  background-color: rgb(230, 230, 230);
+}
+.light-theme .addLink #save:hover {
+  background-color: #fff;
+  border-color: #ab377a;
+}
+.light-theme #toolDataArea select {
+  background: #ccc;
+  color: #000;
+}
+.light-theme #toolTip {
+  background: #ccc;
+  color: #fff;
+}
+
+.dark-theme {
+  background: #202020;
+}
+.dark-theme header,
+.dark-theme footer {
+  background: #101010;
+  color: #ababab;
+}
+.dark-theme header a,
+.dark-theme footer a {
+  color: #fff;
+}
+.dark-theme header a:hover, .dark-theme header a:active,
+.dark-theme footer a:hover,
+.dark-theme footer a:active {
+  color: #00cc33;
+}
+.dark-theme header nav button {
+  color: #fff;
+  background: #101010;
+}
+.dark-theme header nav button:hover, .dark-theme header nav button.active {
+  color: #00cc33;
+  background: radial-gradient(closest-side, #303030, #202020, #101010);
+}
+.dark-theme main h1 {
+  color: #ababab;
+}
+.dark-theme main .menu {
+  background: #404040;
+  color: #fff;
+}
+.dark-theme main .menu:hover, .dark-theme main .menu:active {
+  background: #303030;
+}
+.dark-theme main .menu a {
+  color: #fff;
+}
+.dark-theme main .menu a:hover, .dark-theme main .menu a:active {
+  color: #00cc33;
+}
+.dark-theme main button {
+  background: #303030;
+  color: #ababab;
+}
+.dark-theme .addLink {
+  background: rgba(0, 0, 0, 0.9);
+  color: #ababab;
+}
+.dark-theme .addLink input {
+  background-color: rgb(230, 230, 230);
+  border-color: rgb(195, 195, 195);
+  color: rgb(9, 30, 66);
+}
+.dark-theme .addLink input:hover {
+  background-color: #fff;
+  border-color: #00cc33;
+}
+.dark-theme .addLink input:focus {
+  background-color: #fff;
+  border-color: #00cc33;
+}
+.dark-theme .addLink #save {
+  color: #3a4149;
+  background-color: rgb(230, 230, 230);
+}
+.dark-theme .addLink #save:hover {
+  background-color: #fff;
+  border-color: #00cc33;
+}
+.dark-theme #toolDataArea select {
+  background: #303030;
+  color: #ababab;
+}
+.dark-theme #toolTip {
+  background: #303030;
+  color: #fff;
+}
+
+header {
+  position: sticky;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid #000;
+  z-index: 3;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.12), 0 0.3rem 0.4rem rgba(0, 0, 0, 0.24);
+}
+header div {
+  padding: 1rem;
+}
+header nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding: 0;
+  gap: 0;
+}
+header nav button {
+  background: none;
+  border: 0;
+  font-size: 1.5rem;
+}
+header nav #themeBtn {
+  position: fixed;
+  right: 1.8rem;
+  bottom: 6rem;
+  border: 3px solid;
+  border-radius: 50%;
+  padding: 3px;
+}
+header nav #themeBtn img {
+  display: block;
+  width: 1.4rem;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 0.1rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top: 2px solid #000;
+  z-index: 3;
+  box-shadow: 0 -0.1rem 0.3rem rgba(0, 0, 0, 0.12), 0 -0.1rem 0.2rem rgba(0, 0, 0, 0.24);
+}
+
+main {
+  margin: 3rem 0 10rem 0;
+}
+main h1 {
+  margin-left: 1.5rem;
+}
+main #dataLinksArea,
+main #webLinksArea,
+main #ownLinksArea {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+  margin: 1rem 1rem 4rem 1rem;
+}
+main #dataLinksArea .menu,
+main #webLinksArea .menu,
+main #ownLinksArea .menu {
+  min-height: 4rem;
+  position: relative;
+}
+main #dataLinksArea .menu a,
+main #webLinksArea .menu a,
+main #ownLinksArea .menu a {
+  display: block;
+  min-height: 2.4rem;
+  padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+}
+main #dataLinksArea .menu button,
+main #webLinksArea .menu button,
+main #ownLinksArea .menu button {
+  position: absolute;
+  top: 0.8rem;
+  right: 1.5rem;
+}
+
+.addLink {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+}
+.addLink p {
+  margin: 1.6rem;
+}
+.addLink input {
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s;
+  line-height: 1.42857;
+  padding: 8px 6px;
+  height: 36px;
+  width: 30rem;
+}
+.addLink input:focus {
+  outline: none;
+}
+.addLink #save {
+  outline: none;
+  padding: 0.9rem;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+}
+.addLink #save:hover {
+  font-weight: bold;
+}
+
+#closeaddLink {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 1.5rem;
+  right: 1.5rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+#closeaddLink:hover {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#toolDataArea {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+#toolDataArea span {
+  position: relative;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#toolDataArea select {
+  width: 80%;
+}
+
+.icon {
+  vertical-align: middle;
+  height: 2.4rem;
+  margin-right: 10px;
+}
+
+#toolTip {
+  position: absolute;
+  left: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+/* Spezielle Klassen */
+.noDis {
+  display: none !important;
+}/*# sourceMappingURL=main.css.map */

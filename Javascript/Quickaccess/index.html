@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="copyright" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="style/main.css" />
+    <script src="scripts/objects.js"></script>
+    <script src="scripts/main.js" defer></script>
+    <title>Quickaccess for Maintanance</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <nav>
+          <button id="toolDataDrop" onclick="toggleToolData()">
+            Tool Data
+          </button>
+          <button id="openaddLink" onclick="toggleAddLinkForm()">
+            Add custom Link
+          </button>
+          <button id="edit" onclick="toggleEdit()">Edit custom Links</button>
+          <button id="themeBtn" onclick="changeTheme()"></button>
+        </nav>
+        <div id="toolDataArea" class="noDis"></div>
+      </header>
+
+      <main>
+        <!--         Local data links manually because browser sandbox
+        "Not allowed to load local resource" -->
+        <h1>Local Data</h1>
+        <div id="dataLinksArea">
+          <div class="menu">
+            <a href=""
+              ><img src="icons/icon-excel.png" class="icon" /> Excel File</a
+            >
+          </div>
+          <div class="menu">
+            <a href=""
+              ><img src="icons/icon-edge.png" class="icon" /> Browser-based
+              File</a
+            >
+          </div>
+          <div class="menu">
+            <a href=""
+              ><img src="icons/icon-ordner.png" class="icon" /> Folder</a
+            >
+          </div>
+          <div class="menu">
+            <a href=""
+              ><img src="icons/icon-pdf.png" class="icon" /> .pdf File</a
+            >
+          </div>
+          <div class="menu">
+            <a href=""
+              ><img src="icons/icon-lager.png" class="icon" /> Warehouse</a
+            >
+          </div>
+          <!--           How to add a new link here:
+          <div class="menu">
+            <a
+              href=" -- Link -- "
+              ><img src="icons/ -- Icon Name -- " class="icon" /> -- Text on Button -- </a
+            >
+          </div> -->
+        </div>
+        <h1>Web Links</h1>
+        <div id="webLinksArea"></div>
+        <div id="ownWrapper" class="">
+          <h1>Own custom Links</h1>
+          <div id="ownLinksArea"></div>
+        </div>
+      </main>
+
+      <div id="addLinkForm" class="addLink noDis"></div>
+      <footer>
+        <p>
+          Questions? Contact me! <a href="mailto:me@mail.com">E-Mail</a> |
+          <a href="tel:+491112345">Mobile</a> | Also read:
+          <a href="README.md" target="_blank"><b>Infos & FAQ</b></a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

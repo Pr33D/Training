@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <button type="button" onclick="showAddBookForm()">+</button>
+      </header>
+      <main>
+        <div id="books"></div>
+
+        <div class="displayNone" id="addBookFormWrapper">
+          <form
+            action="javascript:void(0);"
+            method="POST"
+            id="addBookForm"
+            onsubmit="addBookToLibrary()"
+          >
+            <fieldset>
+              <legend>General Informations</legend>
+              <label for="title"><p>Title</p></label
+              ><input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Book Title"
+              />
+              <label for="author"><p>Author</p></label
+              ><input type="text" name="author" id="author" />
+              <label for="pages"><p>Pages</p></label
+              ><input
+                type="number"
+                name="pages"
+                id="pages"
+                placeholder="Number of pages"
+              />
+            </fieldset>
+            <fieldset>
+              <legend>Have you already finished the Book?</legend>
+              <p>
+                <label for="read"
+                  ><input type="checkbox" name="read" id="read" />Yeah, i have
+                  already read it!</label
+                >
+              </p>
+            </fieldset>
+            <button type="submit">Add Book</button>
+            <button type="reset">Clear Entries</button>
+            <button type="button" onclick="showAddBookForm()">Close</button>
+          </form>
+        </div>
+
+        <footer></footer>
+      </main>
+    </div>
+  </body>
+</html>
